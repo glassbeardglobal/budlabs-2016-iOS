@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--BarleyNet-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BarleyNet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstVC" customModule="BarleyNet" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,11 +18,358 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="437-ld-rcZ">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01o-J6-Qwo">
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Ino-Pv-GoB" kind="show" identifier="registerSegue" id="e8I-wC-5o8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.66361850500106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="01o-J6-Qwo" firstAttribute="leading" secondItem="437-ld-rcZ" secondAttribute="leading" id="0fw-ms-WSi"/>
+                                    <constraint firstItem="01o-J6-Qwo" firstAttribute="top" secondItem="437-ld-rcZ" secondAttribute="top" id="Erh-Hk-nKg"/>
+                                    <constraint firstAttribute="bottom" secondItem="01o-J6-Qwo" secondAttribute="bottom" id="dog-Bc-MIB"/>
+                                    <constraint firstAttribute="trailing" secondItem="01o-J6-Qwo" secondAttribute="trailing" id="f0r-fg-gY8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypP-4c-QRQ">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-rU-aSG">
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="16"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9ky-qY-6Ws" kind="show" identifier="loginSegue" id="zdf-t2-ax2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2bA-rU-aSG" secondAttribute="bottom" id="07e-AA-460"/>
+                                    <constraint firstItem="2bA-rU-aSG" firstAttribute="leading" secondItem="ypP-4c-QRQ" secondAttribute="leading" id="cCq-tr-w9k"/>
+                                    <constraint firstItem="2bA-rU-aSG" firstAttribute="top" secondItem="ypP-4c-QRQ" secondAttribute="top" id="gFj-zo-KwN"/>
+                                    <constraint firstAttribute="trailing" secondItem="2bA-rU-aSG" secondAttribute="trailing" id="xG1-so-mwa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BarleyNet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsB-jb-YSb">
+                                <frame key="frameInset" minY="90" width="375" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="437-ld-rcZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="187" id="5s3-3V-BL5"/>
+                            <constraint firstItem="ypP-4c-QRQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8d0-od-oRB"/>
+                            <constraint firstItem="ypP-4c-QRQ" firstAttribute="top" secondItem="437-ld-rcZ" secondAttribute="top" id="Iba-tr-P7b"/>
+                            <constraint firstAttribute="trailing" secondItem="ypP-4c-QRQ" secondAttribute="trailing" constant="187" id="RS4-lo-Ike"/>
+                            <constraint firstItem="437-ld-rcZ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="bb6-2f-jeB"/>
+                            <constraint firstAttribute="trailing" secondItem="437-ld-rcZ" secondAttribute="trailing" id="keG-dQ-LX7"/>
+                            <constraint firstItem="ypP-4c-QRQ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qb9-V0-xGL"/>
+                            <constraint firstItem="ypP-4c-QRQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="617" id="t3u-PR-ti3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="BarleyNet" id="aop-gk-a6l"/>
+                    <connections>
+                        <segue destination="XLV-f2-raE" kind="show" identifier="directLoginSegue" id="Qs6-QS-hSo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="93.103448275862078"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="txz-3B-tBw">
+            <objects>
+                <viewController id="9ky-qY-6Ws" customClass="LoginVC" customModule="BarleyNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9X7-PY-VxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ksx-p4-OhU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nmK-zK-0Vu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8J1-0f-lfz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AeL-8U-Ehz"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-dq-LwL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M3t-vB-A0k"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-9r-m94">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWQ-Sc-v3b">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0B-Us-6RZ">
+                                <color key="barTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="LOGIN" id="zXe-8l-Zjk"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-aD-QWe">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvd-5E-TSP">
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="9ky-qY-6Ws" eventType="touchUpInside" id="M6Z-Ne-Nm6"/>
+                                            <segue destination="XLV-f2-raE" kind="show" id="UAM-fa-Rv9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.66361850499999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mvd-5E-TSP" secondAttribute="trailing" id="1uc-oh-yZ6"/>
+                                    <constraint firstItem="Mvd-5E-TSP" firstAttribute="top" secondItem="2Pt-aD-QWe" secondAttribute="top" id="3Yk-Yu-t7t"/>
+                                    <constraint firstItem="Mvd-5E-TSP" firstAttribute="leading" secondItem="2Pt-aD-QWe" secondAttribute="leading" id="V5H-bH-qxJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mvd-5E-TSP" secondAttribute="bottom" constant="-5" id="fje-Zw-Jyh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ksx-p4-OhU" firstAttribute="top" secondItem="lUz-9r-m94" secondAttribute="bottom" constant="509" id="0Eo-iE-mEU"/>
+                            <constraint firstItem="NaE-dq-LwL" firstAttribute="leading" secondItem="nmK-zK-0Vu" secondAttribute="leadingMargin" id="2ve-X9-XfF"/>
+                            <constraint firstItem="NaE-dq-LwL" firstAttribute="leading" secondItem="8J1-0f-lfz" secondAttribute="leading" id="5AO-3m-jws"/>
+                            <constraint firstItem="2Pt-aD-QWe" firstAttribute="top" secondItem="8J1-0f-lfz" secondAttribute="bottom" constant="8" symbolic="YES" id="AED-hw-1sU"/>
+                            <constraint firstItem="PWQ-Sc-v3b" firstAttribute="top" secondItem="NaE-dq-LwL" secondAttribute="bottom" constant="8" symbolic="YES" id="EQ0-Ow-RYt"/>
+                            <constraint firstItem="Z0B-Us-6RZ" firstAttribute="leading" secondItem="PWQ-Sc-v3b" secondAttribute="leading" id="JNL-8b-iso"/>
+                            <constraint firstItem="2Pt-aD-QWe" firstAttribute="top" secondItem="lUz-9r-m94" secondAttribute="top" id="L4r-x7-z1l"/>
+                            <constraint firstItem="8J1-0f-lfz" firstAttribute="top" secondItem="PWQ-Sc-v3b" secondAttribute="bottom" constant="8" symbolic="YES" id="MGj-aG-SPz"/>
+                            <constraint firstItem="2Pt-aD-QWe" firstAttribute="trailing" secondItem="lUz-9r-m94" secondAttribute="trailing" id="OVz-a6-XKD"/>
+                            <constraint firstItem="PWQ-Sc-v3b" firstAttribute="leading" secondItem="lUz-9r-m94" secondAttribute="leading" id="PFm-R2-tnc"/>
+                            <constraint firstAttribute="trailing" secondItem="Z0B-Us-6RZ" secondAttribute="trailing" id="UVe-j0-V91"/>
+                            <constraint firstItem="8J1-0f-lfz" firstAttribute="top" secondItem="nmK-zK-0Vu" secondAttribute="top" constant="119" id="W90-jN-7Cm"/>
+                            <constraint firstItem="NaE-dq-LwL" firstAttribute="trailing" secondItem="8J1-0f-lfz" secondAttribute="trailing" id="WgL-ES-L83"/>
+                            <constraint firstItem="lUz-9r-m94" firstAttribute="leading" secondItem="2Pt-aD-QWe" secondAttribute="leading" id="YMk-Al-CAL"/>
+                            <constraint firstItem="NaE-dq-LwL" firstAttribute="centerX" secondItem="PWQ-Sc-v3b" secondAttribute="centerX" id="dZI-8S-Sjc"/>
+                            <constraint firstItem="PWQ-Sc-v3b" firstAttribute="trailing" secondItem="lUz-9r-m94" secondAttribute="trailing" id="dsN-3H-L6E"/>
+                            <constraint firstItem="Z0B-Us-6RZ" firstAttribute="leading" secondItem="nmK-zK-0Vu" secondAttribute="leading" id="fcS-rW-2o6"/>
+                            <constraint firstItem="ksx-p4-OhU" firstAttribute="top" secondItem="2Pt-aD-QWe" secondAttribute="bottom" constant="460" id="iw5-4F-E7r"/>
+                            <constraint firstItem="Z0B-Us-6RZ" firstAttribute="trailing" secondItem="PWQ-Sc-v3b" secondAttribute="trailing" id="jUb-0M-sSx"/>
+                            <constraint firstItem="Z0B-Us-6RZ" firstAttribute="top" secondItem="9X7-PY-VxU" secondAttribute="bottom" id="r87-ZX-Yfh"/>
+                            <constraint firstItem="NaE-dq-LwL" firstAttribute="top" secondItem="Z0B-Us-6RZ" secondAttribute="bottom" constant="8" id="uym-Un-Pta"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="NaE-dq-LwL" id="WVZ-rI-oEw"/>
+                        <outlet property="passwordTextField" destination="8J1-0f-lfz" id="ygL-Ld-6fV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ob7-D8-QzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="975.56221889055485"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="5pa-Hq-aLc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeStoryBoard" storyboardName="Home" id="XLV-f2-raE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMi-CB-aVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="1444"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="9Bf-Ee-Cj9">
+            <objects>
+                <viewController id="Ino-Pv-GoB" customClass="RegisterVC" customModule="BarleyNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PZd-HM-XTC"/>
+                        <viewControllerLayoutGuide type="bottom" id="P1t-PW-jug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="diS-QY-J93">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL ADDRESS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vho-ux-6jq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9vU-8z-g82"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGG-SZ-eau">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mja-h3-Gec"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-UT-vpM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ox3-fM-RoM"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z09-jD-oHb">
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <state key="normal" title="AGRONOMIST">
+                                    <color key="titleColor" red="0.0" green="0.66361850500106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="agronomistButton:" destination="Ino-Pv-GoB" eventType="touchUpInside" id="k0E-2U-toH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARE YOU A(N)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-n0-dIw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="vQy-9e-eaY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drY-zJ-awV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="N5a-fm-fUh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mci-Jk-Cs8">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-NT-krh">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEs-qJ-J9E">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05S-Km-KbT">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmE-zU-2YO">
+                                <color key="barTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="REGISTRATION" id="tHC-fg-XIF"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzV-uz-AvC">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-qc-iMD">
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerButton:" destination="Ino-Pv-GoB" eventType="touchUpInside" id="pBz-v4-aLF"/>
+                                            <segue destination="XLV-f2-raE" kind="show" id="nya-he-rXK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.66361850500106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="v9f-qc-iMD" firstAttribute="leading" secondItem="RzV-uz-AvC" secondAttribute="leading" id="2NB-lV-kjl"/>
+                                    <constraint firstAttribute="bottom" secondItem="v9f-qc-iMD" secondAttribute="bottom" id="6o0-na-37V"/>
+                                    <constraint firstItem="v9f-qc-iMD" firstAttribute="top" secondItem="RzV-uz-AvC" secondAttribute="top" id="NMH-dS-FFF"/>
+                                    <constraint firstAttribute="trailing" secondItem="v9f-qc-iMD" secondAttribute="trailing" id="re7-cT-Mic"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6T-4d-8uh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zpr-if-FFj"/>
+                                    <constraint firstAttribute="width" constant="70" id="lwa-8n-bbF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                <state key="normal" title="GROWER">
+                                    <color key="titleColor" red="0.0" green="0.66361850500106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="growerButton:" destination="Ino-Pv-GoB" eventType="touchUpInside" id="WgO-fC-F13"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eEs-qJ-J9E" firstAttribute="trailing" secondItem="05S-Km-KbT" secondAttribute="trailing" id="13d-xy-lpp"/>
+                            <constraint firstItem="gmE-zU-2YO" firstAttribute="leading" secondItem="diS-QY-J93" secondAttribute="leading" id="36P-f2-sHo"/>
+                            <constraint firstItem="DTB-n0-dIw" firstAttribute="centerY" secondItem="z09-jD-oHb" secondAttribute="centerY" id="3Tb-8A-8Q0"/>
+                            <constraint firstItem="drY-zJ-awV" firstAttribute="centerY" secondItem="s6T-4d-8uh" secondAttribute="centerY" id="3bp-xO-y13"/>
+                            <constraint firstItem="RzV-uz-AvC" firstAttribute="top" secondItem="z09-jD-oHb" secondAttribute="bottom" constant="8" symbolic="YES" id="5EO-3A-rZp"/>
+                            <constraint firstItem="z09-jD-oHb" firstAttribute="centerY" secondItem="drY-zJ-awV" secondAttribute="centerY" id="6Mb-Hn-5o0"/>
+                            <constraint firstItem="drY-zJ-awV" firstAttribute="top" secondItem="s6T-4d-8uh" secondAttribute="top" id="6eO-PJ-yqK"/>
+                            <constraint firstItem="z09-jD-oHb" firstAttribute="top" secondItem="eEs-qJ-J9E" secondAttribute="bottom" constant="8" symbolic="YES" id="7Lm-eV-Wms"/>
+                            <constraint firstItem="RzV-uz-AvC" firstAttribute="leading" secondItem="05S-Km-KbT" secondAttribute="leading" id="7rM-gQ-Ozq"/>
+                            <constraint firstItem="eEs-qJ-J9E" firstAttribute="leading" secondItem="05S-Km-KbT" secondAttribute="leading" id="8PT-ej-VuS"/>
+                            <constraint firstItem="AGG-SZ-eau" firstAttribute="trailing" secondItem="Vho-ux-6jq" secondAttribute="trailing" id="Bez-Lj-Mhb"/>
+                            <constraint firstItem="RzV-uz-AvC" firstAttribute="top" secondItem="05S-Km-KbT" secondAttribute="bottom" id="ByN-AJ-EKa"/>
+                            <constraint firstItem="Vho-ux-6jq" firstAttribute="top" secondItem="3qa-NT-krh" secondAttribute="bottom" constant="8" symbolic="YES" id="DlN-7o-Q7g"/>
+                            <constraint firstItem="RzV-uz-AvC" firstAttribute="trailing" secondItem="05S-Km-KbT" secondAttribute="trailing" id="JKp-2d-v22"/>
+                            <constraint firstItem="drY-zJ-awV" firstAttribute="leading" secondItem="z09-jD-oHb" secondAttribute="trailing" constant="19" id="Mps-ef-ymQ"/>
+                            <constraint firstItem="Mci-Jk-Cs8" firstAttribute="trailing" secondItem="eEs-qJ-J9E" secondAttribute="trailing" id="OIr-c0-7z0"/>
+                            <constraint firstItem="05S-Km-KbT" firstAttribute="top" secondItem="DTB-n0-dIw" secondAttribute="bottom" constant="8" symbolic="YES" id="Px1-xg-dIi"/>
+                            <constraint firstItem="Mci-Jk-Cs8" firstAttribute="top" secondItem="Vho-ux-6jq" secondAttribute="bottom" constant="8" symbolic="YES" id="QZN-N5-hl7"/>
+                            <constraint firstItem="RzV-uz-AvC" firstAttribute="top" secondItem="05S-Km-KbT" secondAttribute="top" id="Qga-aJ-Qgn"/>
+                            <constraint firstItem="3qa-NT-krh" firstAttribute="leading" secondItem="Mci-Jk-Cs8" secondAttribute="leading" id="U1j-q1-SgF"/>
+                            <constraint firstItem="z09-jD-oHb" firstAttribute="leading" secondItem="diS-QY-J93" secondAttribute="leadingMargin" constant="96" id="Unc-VK-nVK"/>
+                            <constraint firstItem="s6T-4d-8uh" firstAttribute="leading" secondItem="drY-zJ-awV" secondAttribute="trailing" constant="9" id="V5V-24-N3z"/>
+                            <constraint firstItem="P1t-PW-jug" firstAttribute="top" secondItem="RzV-uz-AvC" secondAttribute="bottom" constant="368" id="WpO-zY-HX8"/>
+                            <constraint firstItem="XJf-UT-vpM" firstAttribute="leading" secondItem="DTB-n0-dIw" secondAttribute="leading" id="X6J-Gq-ybA"/>
+                            <constraint firstAttribute="trailing" secondItem="gmE-zU-2YO" secondAttribute="trailing" id="Xyg-e8-gZb"/>
+                            <constraint firstItem="AGG-SZ-eau" firstAttribute="leading" secondItem="diS-QY-J93" secondAttribute="leadingMargin" id="Z6Z-Yl-Gru"/>
+                            <constraint firstItem="gmE-zU-2YO" firstAttribute="trailing" secondItem="3qa-NT-krh" secondAttribute="trailing" id="ZES-RE-0q5"/>
+                            <constraint firstItem="3qa-NT-krh" firstAttribute="trailing" secondItem="Mci-Jk-Cs8" secondAttribute="trailing" id="ZEs-i9-mZJ"/>
+                            <constraint firstItem="Mci-Jk-Cs8" firstAttribute="leading" secondItem="eEs-qJ-J9E" secondAttribute="leading" id="ZQ7-cs-ZnD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s6T-4d-8uh" secondAttribute="trailing" constant="13" id="cWY-Ab-Q62"/>
+                            <constraint firstItem="gmE-zU-2YO" firstAttribute="top" secondItem="diS-QY-J93" secondAttribute="topMargin" constant="17" id="dJd-IE-1fV"/>
+                            <constraint firstItem="eEs-qJ-J9E" firstAttribute="top" secondItem="XJf-UT-vpM" secondAttribute="bottom" constant="8" symbolic="YES" id="e5U-Lh-W7G"/>
+                            <constraint firstItem="z09-jD-oHb" firstAttribute="top" secondItem="diS-QY-J93" secondAttribute="top" constant="210" id="eCg-CQ-nRX"/>
+                            <constraint firstItem="Vho-ux-6jq" firstAttribute="leading" secondItem="XJf-UT-vpM" secondAttribute="leading" id="ea7-pR-ddt"/>
+                            <constraint firstItem="z09-jD-oHb" firstAttribute="top" secondItem="drY-zJ-awV" secondAttribute="top" id="fNf-Mi-MKc"/>
+                            <constraint firstItem="AGG-SZ-eau" firstAttribute="top" secondItem="gmE-zU-2YO" secondAttribute="bottom" constant="8" id="hvV-fz-hjf"/>
+                            <constraint firstItem="XJf-UT-vpM" firstAttribute="top" secondItem="diS-QY-J93" secondAttribute="top" constant="163" id="j70-sp-GUF"/>
+                            <constraint firstItem="XJf-UT-vpM" firstAttribute="top" secondItem="Mci-Jk-Cs8" secondAttribute="bottom" constant="8" symbolic="YES" id="jXi-VN-Rum"/>
+                            <constraint firstItem="AGG-SZ-eau" firstAttribute="centerX" secondItem="3qa-NT-krh" secondAttribute="centerX" id="lIr-tn-aWw"/>
+                            <constraint firstItem="Vho-ux-6jq" firstAttribute="top" secondItem="diS-QY-J93" secondAttribute="top" constant="116" id="mOG-Sh-Lo8"/>
+                            <constraint firstItem="3qa-NT-krh" firstAttribute="top" secondItem="AGG-SZ-eau" secondAttribute="bottom" constant="8" symbolic="YES" id="tM8-go-Tsr"/>
+                            <constraint firstItem="AGG-SZ-eau" firstAttribute="leading" secondItem="Vho-ux-6jq" secondAttribute="leading" id="wDw-fb-kxh"/>
+                            <constraint firstItem="Vho-ux-6jq" firstAttribute="trailing" secondItem="XJf-UT-vpM" secondAttribute="trailing" id="xiY-ji-F9N"/>
+                            <constraint firstItem="gmE-zU-2YO" firstAttribute="leading" secondItem="3qa-NT-krh" secondAttribute="leading" id="zfg-bt-rCC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="gbB-A7-bC8"/>
+                    <connections>
+                        <outlet property="agroButton" destination="z09-jD-oHb" id="mGO-RU-TEs"/>
+                        <outlet property="emailTextField" destination="Vho-ux-6jq" id="ueP-PR-Usc"/>
+                        <outlet property="growButton" destination="s6T-4d-8uh" id="X9A-W1-jNd"/>
+                        <outlet property="nameTextField" destination="AGG-SZ-eau" id="HUx-dx-I7R"/>
+                        <outlet property="passwordTextField" destination="XJf-UT-vpM" id="q69-7f-Whq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAx-hu-xcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="975.56221889055485"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qs6-QS-hSo"/>
+    </inferredMetricsTieBreakers>
 </document>

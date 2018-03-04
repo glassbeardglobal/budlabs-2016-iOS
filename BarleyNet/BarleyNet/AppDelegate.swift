@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let id = UserDefaults.standard.object(forKey: "id") as? String{
+            var barley:String = "http://barleynet.herokuapp.com/api/users/"
+            barley = "\(barley)\(id)"
+            print(barley)
+            directLoginGetRequest(withURL: barley)
+            let storyboard = UIStoryboard.init(name: "Home", bundle: Bundle.main)
+            let viewController = storyboard.instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 
@@ -106,6 +116,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    func directLoginGetRequest(withURL url:String) {
+        let myURL = URL(string: url)
+        var request = URLRequest(url: myURL!)
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil else {
+                print(error)
+                return
+            }
+            guard let data = data else {
+                print("Data is empty")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse , httpStatus.statusCode != 200 {
+                // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            do {
+                print("getRequest:")
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                print(json)
+            } catch {
+                print("JSON serialization failed")
+            }
+        }
+        task.resume()
+    }
 }
 
